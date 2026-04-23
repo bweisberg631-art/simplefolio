@@ -1,345 +1,660 @@
-<!--
-  Hello!
-  -
-  Simplefolio is a clean and responsive portfolio template for Developers!
-  Created by Jacobo Martinez.
-  -
-  Github Repo: https://github.com/cobiwave/simplefolio/
-  Readme: https://github.com/cobiwave/simplefolio/README.md
-  -
-  For business & inquires, contact me -> jacobojavier98@gmail.com
--->
 <!DOCTYPE html>
-<html lang="en" class="sr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
-
-    <!-- Todo: put here your site title -->
-    <title>[Your name here] | Developer</title>
-    <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="[username], [name], skill" />
-    <!-- Todo: improve your SEO by adding a small description of you -->
-    <meta name="description" content="[Your name here] | Developer" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Weisberg — Creative Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="styles.scss" />
-    <script
-      defer
-      src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
-    ></script>
-
-    <!-- Todo: remove the below script once you finish your portfolio -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
   </head>
-
-  <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
   <body>
-    <div id="top"></div>
 
-    <!-- **** Hero Section **** -->
-    <section id="hero" class="jumbotron">
-      <div class="container">
-        <h1 class="hero-title load-hidden">
-          Hi, my name is <span class="text-color-main">Ben Weisberg</span>
-          <br />
-          I'm a web devoloper.
-        </h1>
-        <p class="hero-cta load-hidden">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
-            >Know more</a
-          >
-        </p>
+    <!-- NAV -->
+    <nav>
+      <a href="#hero" class="nav-logo"> Ben Weisberg</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programming">Dev</a></li>
+        <li><a href="#webdesign">Web</a></li>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#social">Social</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div style="position:absolute;inset:0;background:rgba(0, 0, 0, 0.591);z-index:0;"></div>
+      <div class="hero-bg"></div>
+      <div class="hero-grid container">
+        <div class="hero-text">
+          <h2 class="hero-pretitle">Creative, Strategic and Bold</h2>
+          <h1 class="hero-title">
+            
+            <em>Development</em><br />
+            & Design
+          </h1>
+          <p class="hero-sub">
+            Programmer and designer. I build websites, grow brands, and keep projects moving — based in Keene, NH.
+          </p>
+          <div class="hero-btns">
+            <a href="#programming" class="btn btn-primary">View My Work</a>
+            <a href="assets/resume.pdf" class="btn btn-outline" target="_blank">Download CV</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <p class="hero-card-label">// Core skills</p>
+            <div class="skill-tags">
+              <span class="tag accent">Java</span>
+              <span class="tag accent">Scala</span>
+              <span class="tag accent">Squarespace</span>
+              <span class="tag accent">C</span>
+              <span class="tag accent">Python</span>
+              <span class="tag accent">Wordpress</span>
+              <span class="tag accent">HTML/CSS</span>
+              <span class="tag accent">MySQL</span>
+              <span class="tag accent">Photoshop</span>
+              <span class="tag accent">Basecamp</span>
+              <span class="tag">SEO</span>
+              <span class="tag">Project Management</span>
+              <span class="tag">Agile Development</span>
+              <span class="tag">Communications</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- /END Hero Section -->
 
-    <!-- **** About Section **** -->
+    <!-- ABOUT -->
     <section id="about">
       <div class="container">
-        <h2 class="section-title load-hidden">About me</h2>
-        <div class="row about-wrapper">
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__image load-hidden">
-              <img
-                alt="Profile Image"
-                class="img-fluid rounded shadow-lg"
-                height="auto"
-                width="300px"
-                src="assets/profile.jpg"
-                alt="Profile Image"
-              />
+        <div class="about-grid">
+          <div class="about-img-wrap">
+            <div class="about-img-placeholder">
+              <i class="fa fa-user"></i>
+            </div>
+            <div class="about-accent-box">
+              <span class="about-degree">B.S. Computer Science</span>
+              <span class="about-school">University of New Hampshire</span>
+              <span class="about-honor">Magna Cum Laude</span>
             </div>
           </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="about-wrapper__info load-hidden">
-              <p class="about-wrapper__info-text">
-                This is where you can describe about yourself. The more you
-                describe about yourself, the more chances you have!
-              </p>
-              <p class="about-wrapper__info-text">
-                Extra Information about you! like hobbies and your goals.
-              </p>
-              <span class="d-flex mt-3">
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--resume"
-                  href="assets/resume.pdf"
-                >
-                  View Resume
-                </a>
-              </span>
-            </div>
+          <div class="about-text">
+            <p class="section-label">About Me</p>
+            <h2 class="section-title">Call me <em style="font-style:italic; color:var(--accent)"> Ben</em></h2>
+            <p>
+              I'm a full-stack developer and web designer with over 5 years of experience building online products.
+              I care deeply about what I do, whether I'm writing code, designing brand material, or working one on one with clients.
+            </p>
+            <p>
+              My background spans software engineering, web development, project management, video production, visual design and more.
+              I bring an end-to-end perspective on digital projects. I've worked with startups, agencies, and independent companies.
+            </p>
+            <p>
+                I bring a positive, solutions-first mindset to everything I do, not just thinking about short-term achievement
+                but what sets the whole team up for success down the road. As well as adhering to simplicity with frequent collaberation and communication to assure projects run smoothly. 
+            </p>
+            <p>
+                When I'm away from my desk, you'll find me, working on personal projects, playing guitar, or spending time with friends and family.
+            </p>
+            <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- /END About Section -->
 
-    <!-- **** Projects Section **** -->
-    <section id="projects">
+    <div class="divider"></div>
+    
+    <!-- PROGRAMMING -->
+    <section id="programming" hidden>
       <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
+        <p class="section-label">Programming</p>
+        <h2 class="section-title">Dev Projects</h2>
+        <p class="section-desc">A selection of software projects — from full-stack web apps to developer tools.</p>
 
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 0</h3>
-                <div>
-                  <p class="mb-4">
-                    Describe the project being very specific, you can use the Twitter standard: no more than 280 characters: 
-                    complement the information: the skills learned or reinforced in its realization and how you faced it, 
-                    prove to be proactive in the search for solutions.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  See Live
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
+        <div class="prog-grid">
+
+          <!-- Project 1 -->
+          <div class="prog-project">
+            <div class="prog-text">
+              <p class="prog-num">// 01</p>
+              <h3 class="prog-title">TaskFlow — Project Management App</h3>
+              <p class="prog-desc">A kanban-style project management tool built for remote teams. Features real-time collaboration, drag-and-drop boards, time tracking, and Slack integration. Built to handle hundreds of concurrent users.</p>
+              <div class="prog-stack">
+                <span class="tag accent">React</span>
+                <span class="tag accent">Node.js</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">Docker</span>
+              </div>
+              <div class="prog-btns">
+                <a href="#!" class="btn btn-primary" target="_blank"><i class="fa fa-play" style="margin-right:0.4rem; font-size:0.75rem"></i>Watch Demo</a>
+                <a href="#!" class="btn btn-outline" target="_blank"><i class="fab fa-github" style="margin-right:0.4rem"></i>GitHub</a>
               </div>
             </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/project.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
+            <div class="prog-visual">
+              <div class="prog-visual-placeholder"><i class="fa fa-code"></i></div>
+              <span class="video-badge"><i class="fa fa-play"></i> Demo</span>
+              <span class="prog-visual-label">TaskFlow v2.1</span>
             </div>
           </div>
-          <!-- /END Project -->
 
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 1</h3>
-                <div>
-                  <p class="mb-4">
-                    Demonstrate in this description the skills of a programmer: such as having commitment, 
-                    having perseverance and accepting alternative solutions. Remember that being a portfolio you are not selling the project, 
-                    you are selling yourself, it reflects the resources used: Frameworks, libraries, platforms, etc.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  See Live
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
+          <!-- Project 2 -->
+          <div class="prog-project">
+            <div class="prog-text">
+              <p class="prog-num">// 02</p>
+              <h3 class="prog-title">PricePulse — E-Commerce Analytics</h3>
+              <p class="prog-desc">A browser extension and dashboard that tracks product prices across major retailers, sends alerts, and visualizes pricing history with interactive charts. Over 2,000 active users.</p>
+              <div class="prog-stack">
+                <span class="tag accent">TypeScript</span>
+                <span class="tag accent">Chrome API</span>
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Redis</span>
+              </div>
+              <div class="prog-btns">
+                <a href="#!" class="btn btn-primary" target="_blank"><i class="fa fa-play" style="margin-right:0.4rem; font-size:0.75rem"></i>Watch Demo</a>
+                <a href="#!" class="btn btn-outline" target="_blank"><i class="fab fa-github" style="margin-right:0.4rem"></i>GitHub</a>
               </div>
             </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/project.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
+            <div class="prog-visual">
+              <div class="prog-visual-placeholder"><i class="fa fa-chart-line"></i></div>
+              <span class="video-badge"><i class="fa fa-play"></i> Demo</span>
+              <span class="prog-visual-label">PricePulse v1.4</span>
             </div>
           </div>
-          <!-- /END Project -->
 
-          <!-- Notice: each .row is a project -->
-          <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Project Title 2</h3>
-                <div>
-                  <p class="mb-4">
-                    If the project was collaborative, reflect it in this description, that will demonstrate communication and/or leadership skills. 
-                    Additionally, if you made use of the mastery of a second language, it will reflect on you professionalism.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  See Live
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
+          <!-- Project 3 -->
+          <div class="prog-project">
+            <div class="prog-text">
+              <p class="prog-num">// 03</p>
+              <h3 class="prog-title">DevDocs CLI — Documentation Tool</h3>
+              <p class="prog-desc">A command-line tool that auto-generates beautiful documentation from code comments, supporting JSDoc, Python docstrings, and Go doc. Outputs markdown, HTML, or PDF with a single command.</p>
+              <div class="prog-stack">
+                <span class="tag accent">Go</span>
+                <span class="tag accent">CLI</span>
+                <span class="tag">Markdown</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+              <div class="prog-btns">
+                <a href="#!" class="btn btn-primary" target="_blank"><i class="fa fa-play" style="margin-right:0.4rem; font-size:0.75rem"></i>Watch Demo</a>
+                <a href="#!" class="btn btn-outline" target="_blank"><i class="fab fa-github" style="margin-right:0.4rem"></i>GitHub</a>
               </div>
             </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div
-                    data-tilt
-                    data-tilt-max="4"
-                    data-tilt-glare="true"
-                    data-tilt-max-glare="0.5"
-                    class="thumbnail rounded js-tilt"
-                  >
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/project.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
+            <div class="prog-visual">
+              <div class="prog-visual-placeholder"><i class="fa fa-terminal"></i></div>
+              <span class="video-badge"><i class="fa fa-play"></i> Demo</span>
+              <span class="prog-visual-label">DevDocs v0.9</span>
             </div>
           </div>
-          <!-- /END Project -->
+
         </div>
       </div>
     </section>
-    <!-- /END Projects Section -->
 
-    <!-- **** Contact Section **** -->
+    <div class="divider"></div>
+
+    <!-- WEB DESIGN -->
+    <section id="webdesign">
+      <div class="container">
+        <p class="section-label">Web Design</p>
+        <h2 class="section-title">Client Websites</h2>
+        <p class="section-desc">Full website projects — Working one on one with clients to understand their vision. Buidling out branding, function and design. Launching with a focus on marketing and SEO (Search Engine Optimization).</p>
+        <p class="section-desc"> Built with Squarespace and Wordpress utilizing custom HTML/CSS for styling. This Portfolio was made entirely with HTML/CSS as well. 
+          The following projects I developed as a Lead Designer alongside <a href="https://keenewebsitedesigners.com/" class="web-link" style="font-size:.85rem" target="_blank"> Keene Website Designers LLC. </a> </p>
+        <div class="web-grid">
+
+          <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/GPA.png"></div>
+            <div class="web-info">
+              <h3>Global Patriot Adjustors</h3>
+              <p>Full brand refresh and e-commerce site for a specialty coffee roaster. Includes subscription management, a brew guide blog, and a wholesale portal.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">Shopify</span>
+                  <span class="tag">Liquid</span>
+                  <span class="tag">SCSS</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.pathwaysforkeene.org/" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-laptop"></i></div>
+            <div class="web-info">
+              <h3>Pathways for Keene</h3>
+              <p>Portfolio and inquiry site for a boutique architectural firm. Focused on large-scale imagery, smooth transitions, and a minimal editorial aesthetic.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">Next.js</span>
+                  <span class="tag">Framer Motion</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-mobile-alt"></i></div>
+            <div class="web-info">
+              <h3>Homestead Covered Bridge Kitchens & Design</h3>
+              <p>Patient-facing landing pages and booking funnel for a telehealth startup. Conversion-optimized with A/B tested hero sections and accessibility-first design.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">React</span>
+                  <span class="tag">Tailwind</span>
+                  <span class="tag">Webflow</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>Keene Website Designers</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>Fred’s Rock Shop</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>The Summit Winery</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- hidden cards -->
+          <div class="web-more" id="webMore" hidden>
+            <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>Vale End</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+            </a>
+
+            <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>Deb Hamel</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+            </a>
+
+            <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>C2C</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+            </a>
+
+            <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>Alfa Nik</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+            </a>
+
+            <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>UHS1963</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+            </a>
+
+            <a href="#!" class="web-card" target="_blank">
+            <div class="web-img"><i class="fa fa-store"></i></div>
+            <div class="web-info">
+              <h3>Rick Monroe Tree Service</h3>
+              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag">WordPress</span>
+                  <span class="tag">ACF</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+              </div>
+            </div>
+            </a>
+          </div>
+          
+
+        </div>
+        <div style="text-align:center; margin-top:3.5rem;">
+          <button class="btn btn-primary" id="webMoreBtn" onclick="toggleMore()">
+            View More <i class="fa fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- DESIGN GALLERY -->
+    <section id="design">
+      <div class="container">
+        <p class="section-label">Design</p>
+        <h2 class="section-title">Visual & Brand Work</h2>
+        <p class="section-desc">Logo systems, brand identities, print, packaging, and illustration. Replace with your actual work images.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <i class="fa fa-palette"></i>
+            <div class="gallery-caption">Luminary Coffee — Brand Identity System</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-pen-nib"></i>
+            <div class="gallery-caption">Meridian — Logo Design</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-image"></i>
+            <div class="gallery-caption">NovaCare — Icon Set</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-box"></i>
+            <div class="gallery-caption">Volta — Packaging Design</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-vector-square"></i>
+            <div class="gallery-caption">Personal — Illustration Series</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-swatchbook"></i>
+            <div class="gallery-caption">Brand Style Guide</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-newspaper"></i>
+            <div class="gallery-caption">Print — Event Posters</div>
+          </div>
+          <div class="gallery-item">
+            <i class="fa fa-shapes"></i>
+            <div class="gallery-caption">Type Exploration</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SOCIAL MEDIA -->
+    <section id="social">
+      <div class="container">
+        <p class="section-label">Social Media</p>
+        <h2 class="section-title">Audience Growth & Content</h2>
+        <p class="section-desc">Strategy, content creation, and community management across platforms.</p>
+
+        <div class="social-intro-grid">
+          <div>
+            <p style="color:var(--muted); margin-bottom:1.5rem;">I've managed social media for brands in food & beverage, health, fitness, and tech — building engaged communities through consistent content strategy, data-driven decisions, and authentic storytelling.</p>
+            <p style="color:var(--muted);">Platforms: Instagram, TikTok, LinkedIn, X/Twitter, Facebook, YouTube Shorts.</p>
+          </div>
+          <div class="social-stats">
+            <div class="stat-card">
+              <span class="stat-num">2.4M</span>
+              <span class="stat-lbl">Total Reach Managed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">8.2%</span>
+              <span class="stat-lbl">Avg. Engagement Rate</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">12+</span>
+              <span class="stat-lbl">Brands Managed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">340%</span>
+              <span class="stat-lbl">Avg. Follower Growth</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-examples">
+          <div class="social-post">
+            <div class="post-img"><i class="fab fa-instagram"></i></div>
+            <div class="post-info">
+              <p class="post-platform"><i class="fab fa-instagram"></i> &nbsp;Instagram — Luminary Coffee</p>
+              <p class="post-caption">Behind-the-scenes origin story reel. Showcasing the farm-to-cup journey from Ethiopia to your morning cup. ☕</p>
+              <div class="post-metrics">
+                <span class="post-metric"><i class="fa fa-heart"></i> 4,821</span>
+                <span class="post-metric"><i class="fa fa-comment"></i> 312</span>
+                <span class="post-metric"><i class="fa fa-share"></i> 890</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-post">
+            <div class="post-img"><i class="fab fa-tiktok"></i></div>
+            <div class="post-info">
+              <p class="post-platform"><i class="fab fa-tiktok"></i> &nbsp;TikTok — Volta Fitness</p>
+              <p class="post-caption">"Day in the life of a trainer" series. #1 performing video format for the account — 3.2M views across the series.</p>
+              <div class="post-metrics">
+                <span class="post-metric"><i class="fa fa-heart"></i> 92K</span>
+                <span class="post-metric"><i class="fa fa-comment"></i> 1.4K</span>
+                <span class="post-metric"><i class="fa fa-share"></i> 18K</span>
+              </div>
+            </div>
+          </div>
+          <div class="social-post">
+            <div class="post-img"><i class="fab fa-linkedin"></i></div>
+            <div class="post-info">
+              <p class="post-platform"><i class="fab fa-linkedin"></i> &nbsp;LinkedIn — NovaCare Health</p>
+              <p class="post-caption">Thought leadership article on telehealth accessibility. Generated 47 inbound B2B leads in one week.</p>
+              <div class="post-metrics">
+                <span class="post-metric"><i class="fa fa-thumbs-up"></i> 1,240</span>
+                <span class="post-metric"><i class="fa fa-comment"></i> 88</span>
+                <span class="post-metric"><i class="fa fa-retweet"></i> 210</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <p class="section-label">Skills</p>
+        <h2 class="section-title">What I Bring</h2>
+        <p class="section-desc">A blend of technical depth and people skills built over years of working across disciplines.</p>
+
+        <div class="skills-grid">
+          <div class="skills-col">
+            <h3><i class="fa fa-code"></i> Technical Skills</h3>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fab fa-react"></i></span>
+              <span class="skill-name">React / Next.js</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fab fa-node-js"></i></span>
+              <span class="skill-name">Node.js / Express</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-database"></i></span>
+              <span class="skill-name">SQL / PostgreSQL</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fab fa-figma"></i></span>
+              <span class="skill-name">Figma / UI Design</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fab fa-aws"></i></span>
+              <span class="skill-name">AWS / Cloud Infra</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:70%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
+              <span class="skill-name">Git / CI/CD</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+            </div>
+          </div>
+
+          <div class="skills-col">
+            <h3><i class="fa fa-people-group"></i> Soft Skills</h3>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-comments"></i></span>
+              <span class="skill-name">Client Communication</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-lightbulb"></i></span>
+              <span class="skill-name">Creative Problem Solving</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-clock"></i></span>
+              <span class="skill-name">Time & Project Management</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-users"></i></span>
+              <span class="skill-name">Cross-functional Collaboration</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-chart-bar"></i></span>
+              <span class="skill-name">Data-Driven Decision Making</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-icon"><i class="fa fa-pen"></i></span>
+              <span class="skill-name">Copywriting & Storytelling</span>
+              <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            class="cta-btn cta-btn--resume"
-            href="mailto:example@email.com"
-            >Call to Action</a
-          >
+        <div class="contact-inner">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">Let's work together</h2>
+          <p>Have a project in mind, a role to fill, or just want to say hi? My inbox is always open.</p>
+          <a href="mailto:alex@example.com" class="btn btn-primary">Say Hello →</a>
         </div>
       </div>
     </section>
-    <!-- /END Contact Section -->
 
-    <!-- **** Footer Section **** -->
-    <footer class="footer navbar-static-bottom">
-      <div class="container">
-        <a rel="noreferrer" href="#top" class="back-to-top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
-        <div class="social-links">
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i class="fa fa-twitter fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i class="fa fa-linkedin fa-inverse"></i>
-          </a>
-          <a rel="noreferrer" href="#!" target="_blank">
-            <i class="fa fa-github fa-inverse"></i>
-          </a>
-        </div>
-
-        <hr />
-
-        <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
-        <p class="footer__text">
-          © 2021 - Template developed by
-          <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank"
-            >Jacobo Martínez</a
-          >
-        </p>
-
-        <!-- TO DO: remove this entire paragraph once you finish your portfolio -->
-        <p class="mt-3 pt-3">
-          <a
-            rel="noreferrer"
-            class="github-button"
-            href="https://github.com/cobiwave/simplefolio/fork"
-            data-icon="octicon-repo-forked"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Fork ntkme/github-buttons on GitHub"
-            >Fork</a
-          >
-          <a
-            rel="noreferrer" 
-            class="github-button"
-            href="https://github.com/cobiwave/simplefolio"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star cobiwave/simplefolio on GitHub"
-            >Star</a
-          >
-        </p>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-socials">
+        <a href="#!" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#!" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#!" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#!" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </footer>
-    <!-- /END Footer Section -->
 
-    <script defer type="module" src="index.js"></script>
+
+
+
+    <script>
+    function toggleMore() {
+      const more = document.getElementById('webMore');
+      const btn = document.getElementById('webMoreBtn');
+      if (more.hidden) {
+        more.hidden = false;
+        btn.innerHTML = 'Show Less <i class="fa fa-chevron-up"></i>';
+      } else {
+        more.hidden = true;
+        btn.innerHTML = 'View More <i class="fa fa-chevron-down"></i>';
+      }
+    }
+  </script>
   </body>
 </html>
