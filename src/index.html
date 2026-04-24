@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="styles.scss" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
   </head>
+
+  <!-- Gallery Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">
+      <i class="fa fa-xmark"></i>
+    </button>
+    <button class="lightbox-btn lightbox-prev" onclick="changeImage(-1)">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+    <button class="lightbox-btn lightbox-next" onclick="changeImage(1)">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+  </div>
+
   <body>
 
     <!-- NAV -->
@@ -29,7 +47,7 @@
 
     <!-- HERO -->
     <section id="hero">
-      <div style="position:absolute;inset:0;background:rgba(0, 0, 0, 0.591);z-index:0;"></div>
+      <div style="position:absolute;inset:0;background:rgba(0, 0, 0, 0.451);z-index:0;"></div>
       <div class="hero-bg"></div>
       <div class="hero-grid container">
         <div class="hero-text">
@@ -60,7 +78,6 @@
               <span class="tag accent">HTML/CSS</span>
               <span class="tag accent">MySQL</span>
               <span class="tag accent">Photoshop</span>
-              <span class="tag accent">Basecamp</span>
               <span class="tag">SEO</span>
               <span class="tag">Project Management</span>
               <span class="tag">Agile Development</span>
@@ -76,8 +93,8 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-img-wrap">
-            <div class="about-img-placeholder">
-              <i class="fa fa-user"></i>
+            <div class="about-img">
+              <img src="assets/headshot-white.png">
             </div>
             <div class="about-accent-box">
               <span class="about-degree">B.S. Computer Science</span>
@@ -103,7 +120,12 @@
             <p>
                 When I'm away from my desk, you'll find me, working on personal projects, playing guitar, or spending time with friends and family.
             </p>
-            <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
+            <div style="display:flex; align-items:center; gap:1rem;">
+              <a href="assets/resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
+              <a href="https://www.linkedin.com/in/yourprofile" class="btn btn-outline" target="_blank">
+                <i class="fab fa-linkedin" style="margin-right:0.4rem;"></i> LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -207,201 +229,196 @@
         <h2 class="section-title">Client Websites</h2>
         <p class="section-desc">Full website projects — Working one on one with clients to understand their vision. Buidling out branding, function and design. Launching with a focus on marketing and SEO (Search Engine Optimization).</p>
         <p class="section-desc"> Built with Squarespace and Wordpress utilizing custom HTML/CSS for styling. This Portfolio was made entirely with HTML/CSS as well. 
-          The following projects I developed as a Lead Designer alongside <a href="https://keenewebsitedesigners.com/" class="web-link" style="font-size:.85rem" target="_blank"> Keene Website Designers LLC. </a> </p>
+          The following projects I developed as a Lead Designer alongside <a href="https://keenewebsitedesigners.com/" class="web-link" style="display: inline; font-size:.85rem" target="_blank"> Keene Website Designers LLC. </a> </p>
         <div class="web-grid">
 
-          <a href="#!" class="web-card" target="_blank">
+          <a href="https://www.globalpatriotadjusters.com/" class="web-card" target="_blank">
             <div class="web-img"><img src="assets/Web-Banners/GPA.png"></div>
             <div class="web-info">
               <h3>Global Patriot Adjustors</h3>
-              <p>Full brand refresh and e-commerce site for a specialty coffee roaster. Includes subscription management, a brew guide blog, and a wholesale portal.</p>
+              <p>Public Insurance Adjusters based in FL and New England. Still supported as of 2026, with over 100 location pages built out targeting keywords and geotagging images to pomote SEO.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">Shopify</span>
-                  <span class="tag">Liquid</span>
-                  <span class="tag">SCSS</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">SEO</span>
+                  <span class="tag">Leads</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+                 
               </div>
             </div>
           </a>
 
           <a href="https://www.pathwaysforkeene.org/" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-laptop"></i></div>
+            <div class="web-img"><img src="assets/Web-Banners/Pathways.png"></div>
             <div class="web-info">
               <h3>Pathways for Keene</h3>
-              <p>Portfolio and inquiry site for a boutique architectural firm. Focused on large-scale imagery, smooth transitions, and a minimal editorial aesthetic.</p>
+              <p>A non-profit organization who maintains the foot trails and bridges in the Keene, NH. Designed with focus on fundraising and functionality (Interactive map with points of interest on "Trails" page).</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">Next.js</span>
-                  <span class="tag">Framer Motion</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Interaction</span>
+                  <span class="tag">Fundraising</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
               </div>
             </div>
           </a>
 
-          <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-mobile-alt"></i></div>
+          <a href="https://hcbkitchens.com/" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/HCBKitchens.png"></div>
             <div class="web-info">
               <h3>Homestead Covered Bridge Kitchens & Design</h3>
-              <p>Patient-facing landing pages and booking funnel for a telehealth startup. Conversion-optimized with A/B tested hero sections and accessibility-first design.</p>
+              <p>Kitchen and Bath renovation company based in Keene, NH. Designed with a focus on an elegant aesthetic and SEO with blog and location pages.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">React</span>
-                  <span class="tag">Tailwind</span>
-                  <span class="tag">Webflow</span>
+                  <span class="tag accent">Wordpress</span>
+                  <span class="tag">Design</span>
+                  <span class="tag">SEO</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
               </div>
             </div>
           </a>
 
-          <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+          <a href="https://www.fredsrockshop.com/" class="web-card" target="_blank">
+           <div class="web-img"><img src="assets/Web-Banners/Freds.png"></div>
+            <div class="web-info">
+              <h3>Fred’s Rock Shop </h3>
+              <p>Polished rock and jewelery store in Putney, VT. Photo's were taken on location and optimized in photoshop, site built with E-Commerce functionality. </p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Photography</span>
+                  <span class="tag">E-Commerce</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://keenewebsitedesigners.com/" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/KWD.png"></div>
             <div class="web-info">
               <h3>Keene Website Designers</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Web Design Company owned by my Dad! Built with a bold but clean design and colors to show our range as designers.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Design</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
               </div>
             </div>
           </a>
 
-          <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
-            <div class="web-info">
-              <h3>Fred’s Rock Shop</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
-              <div class="web-meta">
-                <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
-                </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
-              </div>
-            </div>
-          </a>
-
-          <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+          <a href="https://thesummitwinery.com/" class="web-card" target="_blank">
+           <div class="web-img"><img src="assets/Web-Banners/summit.png"></div>
             <div class="web-info">
               <h3>The Summit Winery</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Winery in Westmoreland, NH. Developed with blog pages to promote SEO and intergrated E-commerce online wine store.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">SEO</span>
+                  <span class="tag">E-Commerce</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
-              </div>
+                </div>
             </div>
           </a>
 
           <!-- hidden cards -->
           <div class="web-more" id="webMore" hidden>
-            <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+            <a href="https://www.valeend.com/" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/Vale.png"></div>
             <div class="web-info">
               <h3>Vale End</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Metal Band in Keene, NH. Designed to bring out the feeling of the bands music to the pages of the site as well as a hub to host and securely share recordings. </p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Design</span>
+                  <span class="tag">Function</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+                 
               </div>
             </div>
             </a>
 
-            <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+            <a href="https://www.debhamel.com/" class="web-card" target="_blank">
+           <div class="web-img"><img src="assets/Web-Banners/Deb-hamel.png"></div>
             <div class="web-info">
               <h3>Deb Hamel</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Childrens book author in NH. Designed to match the child-friendly aestheics from her books. As well as promotion of her books on Amazon.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Design</span>
+                  <span class="tag">Promotion</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+                 
               </div>
             </div>
             </a>
 
-            <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
-            <div class="web-info">
-              <h3>C2C</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
-              <div class="web-meta">
-                <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
-                </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
-              </div>
-            </div>
-            </a>
+            
 
-            <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+            <a href="https://www.alfa-nik.com/" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/alfa.png"></div>
             <div class="web-info">
               <h3>Alfa Nik</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Fundraising site for an orphange in the Ukraine. Built with a bright design and integrated donation functionality for raising money.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Design</span>
+                  <span class="tag">Fundraising</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+                
               </div>
             </div>
             </a>
 
-            <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+            <a href="https://www.uhs1963.com/" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/UHS.png"></div>
             <div class="web-info">
               <h3>UHS1963</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Uniontown High School class of 1963 memorial fund. Simple website design with focus on fundraising functionality.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Fundraising</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+                 
               </div>
             </div>
             </a>
 
-            <a href="#!" class="web-card" target="_blank">
-            <div class="web-img"><i class="fa fa-store"></i></div>
+            <a href="https://www.rickmunroetreeservice.com/" class="web-card" target="_blank">
+            <div class="web-img"><img src="assets/Web-Banners/Rick-monroe.png"></div>
             <div class="web-info">
               <h3>Rick Monroe Tree Service</h3>
-              <p>Class scheduling, membership management, and trainer profile site for a boutique fitness studio. Integrated with Mindbody for booking.</p>
+              <p>Tree removal and clearing company in Ashburnham, MA. Informative clean design. Showcases their work with quotes in a straight forward way.</p>
               <div class="web-meta">
                 <div class="web-tech">
-                  <span class="tag">WordPress</span>
-                  <span class="tag">ACF</span>
-                  <span class="tag">PHP</span>
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">Design</span>
                 </div>
-                <br><span class="web-link">Visit Site <i class="fa fa-arrow-up-right-from-square"></i></span>
+                 
               </div>
             </div>
             </a>
+
+          <div class="web-card deprecated">
+            <div class="web-img" style="pointer-events:none"><img src="assets/Web-Banners/C2C.png"></div>
+            <div class="web-info">
+              <h3>C2C</h3>
+              <p>Restoration and repair company located in FL. Focus on SEO with dozens of location pages being built.</p>
+              <div class="web-meta">
+                <div class="web-tech">
+                  <span class="tag accent">Squarespace</span>
+                  <span class="tag">SEO</span>
+                </div>
+                 <span class="web-link deprecated">Deprecated <i class="fa fa-circle-xmark"></i></span>
+              </div>
+            </div>
+          </div>
+
           </div>
           
 
@@ -421,41 +438,60 @@
       <div class="container">
         <p class="section-label">Design</p>
         <h2 class="section-title">Visual & Brand Work</h2>
-        <p class="section-desc">Logo systems, brand identities, print, packaging, and illustration. Replace with your actual work images.</p>
+        <p class="section-desc">Logos, advertisements, and other digital media work. I use Photoshop and Canva to design material that takes my clients brands to the next level.
 
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <i class="fa fa-palette"></i>
-            <div class="gallery-caption">Luminary Coffee — Brand Identity System</div>
+        <div class="gallery-grid" >
+
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/KWD-Logo.png" />
+            <div class="gallery-caption">Keene Website Designers Logo</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-pen-nib"></i>
-            <div class="gallery-caption">Meridian — Logo Design</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/practical-Drumming.png" />
+            <div class="gallery-caption">Drumming Course Cover Design</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-image"></i>
-            <div class="gallery-caption">NovaCare — Icon Set</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/Cohere-1.jpg" />
+            <div class="gallery-caption">Global Round Table Leadership Linkedin Post</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-box"></i>
-            <div class="gallery-caption">Volta — Packaging Design</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/Logo-rockshop-white.png" />
+            <div class="gallery-caption">Fred's Rock Shop Logo</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-vector-square"></i>
-            <div class="gallery-caption">Personal — Illustration Series</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/drew-red.jpg" />
+            <div class="gallery-caption">Wine Label Design</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-swatchbook"></i>
-            <div class="gallery-caption">Brand Style Guide</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/FAQ.png" />
+            <div class="gallery-caption">HCBKitchens FAQ Facebook Post</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-newspaper"></i>
-            <div class="gallery-caption">Print — Event Posters</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/KWD-mtn-final-nb.png" />
+            <div class="gallery-caption">Alternative KWD Logo</div>
           </div>
-          <div class="gallery-item">
-            <i class="fa fa-shapes"></i>
-            <div class="gallery-caption">Type Exploration</div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/Favicon.png" />
+            <div class="gallery-caption">Fav-Icon for Strike Electric</div>
           </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/CoHere-2.jpg" />
+            <div class="gallery-caption">GLoabal Round Table Leadership LinkedIn Post 2</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/Homestead-End-Card.png" />
+            <div class="gallery-caption">HCBKitchens CTA End Card for Videos</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/Homestead-Banner.png" />
+            <div class="gallery-caption">HCBKitchens YouTube Banner</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="assets/Design-Gallery/Jeff - cover banner linkdin.png" />
+            <div class="gallery-caption">Jeff Saari LinkedIn Banner</div>
+          </div>
+
+
         </div>
       </div>
     </section>
@@ -466,71 +502,50 @@
     <section id="social">
       <div class="container">
         <p class="section-label">Social Media</p>
-        <h2 class="section-title">Audience Growth & Content</h2>
-        <p class="section-desc">Strategy, content creation, and community management across platforms.</p>
+        <h2 class="section-title">Strategy and Content Creation </h2>
+        <p class="section-desc">
+          I work with a focus on brand awareness and optimizing for views and community engagement across different platforms.  </p>
+        </p>
 
-        <div class="social-intro-grid">
-          <div>
-            <p style="color:var(--muted); margin-bottom:1.5rem;">I've managed social media for brands in food & beverage, health, fitness, and tech — building engaged communities through consistent content strategy, data-driven decisions, and authentic storytelling.</p>
-            <p style="color:var(--muted);">Platforms: Instagram, TikTok, LinkedIn, X/Twitter, Facebook, YouTube Shorts.</p>
-          </div>
-          <div class="social-stats">
-            <div class="stat-card">
-              <span class="stat-num">2.4M</span>
-              <span class="stat-lbl">Total Reach Managed</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">8.2%</span>
-              <span class="stat-lbl">Avg. Engagement Rate</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">12+</span>
-              <span class="stat-lbl">Brands Managed</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-num">340%</span>
-              <span class="stat-lbl">Avg. Follower Growth</span>
-            </div>
-          </div>
-        </div>
-
+        <a href="https://www.youtube.com/@BeBetterModel" target="_blank" style="text-decoration: none; color: inherit;">
         <div class="social-examples">
           <div class="social-post">
-            <div class="post-img"><i class="fab fa-instagram"></i></div>
+            <div class="post-img"><img src="assets/Social Media/Be-Better.png" /></div>
             <div class="post-info">
-              <p class="post-platform"><i class="fab fa-instagram"></i> &nbsp;Instagram — Luminary Coffee</p>
-              <p class="post-caption">Behind-the-scenes origin story reel. Showcasing the farm-to-cup journey from Ethiopia to your morning cup. ☕</p>
-              <div class="post-metrics">
-                <span class="post-metric"><i class="fa fa-heart"></i> 4,821</span>
-                <span class="post-metric"><i class="fa fa-comment"></i> 312</span>
-                <span class="post-metric"><i class="fa fa-share"></i> 890</span>
-              </div>
+              <p class="post-platform"><i class="fab fa-youtube"></i> &nbsp;Youtube — Be Better Model</p>
+              <p class="post-caption">Aug 2025 - Nov 2025 </p>
+              <p class="post-caption">Coaching Expert, Jeff Saari's "Be Better Model" helps people achieve their best in work and life! 
+               Videos were edited with additional content (imagery, music, title cards) to increase engagement. 
+               Scheduled using "Buffer" for organization across Youtube and LinkedIn with custom thumbnails.  </p>
             </div>
           </div>
+          </a>
+
+        <a href="https://www.facebook.com/p/Homestead-Covered-Bridge-Kitchens-Design-61572883751591/" target="_blank" style="text-decoration: none; color: inherit;">
           <div class="social-post">
-            <div class="post-img"><i class="fab fa-tiktok"></i></div>
+            <div class="post-img"><img src="assets/Social Media/HCBKitchens.png" /></div>
             <div class="post-info">
-              <p class="post-platform"><i class="fab fa-tiktok"></i> &nbsp;TikTok — Volta Fitness</p>
-              <p class="post-caption">"Day in the life of a trainer" series. #1 performing video format for the account — 3.2M views across the series.</p>
-              <div class="post-metrics">
-                <span class="post-metric"><i class="fa fa-heart"></i> 92K</span>
-                <span class="post-metric"><i class="fa fa-comment"></i> 1.4K</span>
-                <span class="post-metric"><i class="fa fa-share"></i> 18K</span>
-              </div>
+              <p class="post-platform"><i class="fab fa-facebook"></i> &nbsp;Facebook — Homestead Covered Bridge Kitchens & Design</p>
+              <p class="post-caption">Jan 2026 - April 2026 </p>
+              <p class="post-caption">HCBKitchens showcases their current projects and gives expert tips to homeowners looking for renovation services.
+                Multiple short-form video series were created.
+                Digital marketing imagery was created as well and posts were managed across Facebook and Youtube.</p>
             </div>
           </div>
+        </a>
+        <a href="https://www.linkedin.com/company/grtl/" target="_blank" style="text-decoration: none; color: inherit;">
           <div class="social-post">
-            <div class="post-img"><i class="fab fa-linkedin"></i></div>
+            <div class="post-img"><img src="assets/Social Media/GRTL.png" /></div>
             <div class="post-info">
-              <p class="post-platform"><i class="fab fa-linkedin"></i> &nbsp;LinkedIn — NovaCare Health</p>
-              <p class="post-caption">Thought leadership article on telehealth accessibility. Generated 47 inbound B2B leads in one week.</p>
-              <div class="post-metrics">
-                <span class="post-metric"><i class="fa fa-thumbs-up"></i> 1,240</span>
-                <span class="post-metric"><i class="fa fa-comment"></i> 88</span>
-                <span class="post-metric"><i class="fa fa-retweet"></i> 210</span>
-              </div>
+              <p class="post-platform"><i class="fab fa-linkedin"></i> &nbsp;LinkedIn — Global Round Table Leadership</p>
+              <p class="post-caption">Oct 2025 - Dec 2025 </p>
+              <p class="post-caption">Coaching and mentoring company and certified B Corp. Produced profesional advertisement content to promote GRTL's new product to potential investers and spread brand awareness.
+                Design work included using a style guide to achive consisitency across the brand.
+
+              </p>
             </div>
           </div>
+        </a>
         </div>
       </div>
     </section>
@@ -542,77 +557,57 @@
       <div class="container">
         <p class="section-label">Skills</p>
         <h2 class="section-title">What I Bring</h2>
-        <p class="section-desc">A blend of technical depth and people skills built over years of working across disciplines.</p>
 
-        <div class="skills-grid">
-          <div class="skills-col">
-            <h3><i class="fa fa-code"></i> Technical Skills</h3>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fab fa-react"></i></span>
-              <span class="skill-name">React / Next.js</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fab fa-node-js"></i></span>
-              <span class="skill-name">Node.js / Express</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-database"></i></span>
-              <span class="skill-name">SQL / PostgreSQL</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:78%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fab fa-figma"></i></span>
-              <span class="skill-name">Figma / UI Design</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fab fa-aws"></i></span>
-              <span class="skill-name">AWS / Cloud Infra</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:70%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fab fa-git-alt"></i></span>
-              <span class="skill-name">Git / CI/CD</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
-            </div>
-          </div>
-
-          <div class="skills-col">
-            <h3><i class="fa fa-people-group"></i> Soft Skills</h3>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-comments"></i></span>
-              <span class="skill-name">Client Communication</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:95%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-lightbulb"></i></span>
-              <span class="skill-name">Creative Problem Solving</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:92%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-clock"></i></span>
-              <span class="skill-name">Time & Project Management</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:88%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-users"></i></span>
-              <span class="skill-name">Cross-functional Collaboration</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:90%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-chart-bar"></i></span>
-              <span class="skill-name">Data-Driven Decision Making</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:82%"></div></div>
-            </div>
-            <div class="skill-item">
-              <span class="skill-icon"><i class="fa fa-pen"></i></span>
-              <span class="skill-name">Copywriting & Storytelling</span>
-              <div class="skill-bar-wrap"><div class="skill-bar" style="width:85%"></div></div>
-            </div>
+        <!-- Technical Skills -->
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><i class="fa fa-code"></i> Technical Skills</h3>
+          <div class="skills-tag-grid">
+            <span class="skill-pill"><i class="fa fa-c"></i> C</span>
+            <span class="skill-pill"><i class="fa fa-scale-balanced"></i> Scala</span>
+            <span class="skill-pill"><i class="fa fa-map"></i> QGIS</span>
+            <span class="skill-pill"><i class="fab fa-java"></i> Java</span>
+            <span class="skill-pill"><i class="fab fa-android"></i> Android Studio</span>
+            <span class="skill-pill"><i class="fab fa-wordpress"></i> Squarespace / WordPress</span>
+            <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-pill"><i class="fa fa-database"></i> MySQL</span>
+            <span class="skill-pill"><i class="fa fa-robot"></i> AI Development</span>
+            <span class="skill-pill"><i class="fa fa-chart-bar"></i> Shiny App</span>
+            <span class="skill-pill"><i class="fab fa-linux"></i> Linux</span>
+            <span class="skill-pill"><i class="fab fa-html5"></i> HTML / CSS</span>
           </div>
         </div>
+
+        <!-- Other Skills -->
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><i class="fa fa-toolbox"></i> Other Skills</h3>
+          <div class="skills-tag-grid">
+            <span class="skill-pill"><i class="fa fa-list-check"></i> Basecamp</span>
+            <span class="skill-pill"><i class="fa fa-video"></i> CapCut</span>
+            <span class="skill-pill"><i class="fa fa-filter"></i> Pipedrive</span>
+            <span class="skill-pill"><i class="fa fa-image"></i> Photoshop</span>
+            <span class="skill-pill"><i class="fa fa-envelope"></i> Mailchimp</span>
+            <span class="skill-pill"><i class="fa fa-paintbrush"></i> Canva</span>
+            <span class="skill-pill"><i class="fab fa-google"></i> Google Suite</span>
+            <span class="skill-pill"><i class="fa fa-buffer"></i> Buffer</span>
+            <span class="skill-pill"><i class="fa fa-magnifying-glass-chart"></i> Google Search Console</span>
+            <span class="skill-pill"><i class="fa fa-microphone"></i> Otter</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-category">
+          <h3 class="skills-cat-title"><i class="fa fa-people-group"></i> Soft Skills</h3>
+          <div class="skills-tag-grid">
+            <span class="skill-pill"><i class="fa fa-diagram-project"></i> Project Management</span>
+            <span class="skill-pill"><i class="fa fa-arrows-spin"></i> Agile Development</span>
+            <span class="skill-pill"><i class="fa fa-comments"></i> Client Communication</span>
+            <span class="skill-pill"><i class="fa fa-bolt"></i> Efficient Programming</span>
+            <span class="skill-pill"><i class="fa fa-clock"></i> Time & Project Management</span>
+            <span class="skill-pill"><i class="fa fa-shapes"></i> Design Patterns</span>
+            <span class="skill-pill"><i class="fa fa-handshake"></i> Collaborative Development</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -625,36 +620,26 @@
           <p class="section-label">Contact</p>
           <h2 class="section-title">Let's work together</h2>
           <p>Have a project in mind, a role to fill, or just want to say hi? My inbox is always open.</p>
-          <a href="mailto:alex@example.com" class="btn btn-primary">Say Hello →</a>
+          <a href="mailto:bweisberg631@gmail.com" class="btn btn-primary">Say Hello →</a>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <div class="footer-socials">
-        <a href="#!" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#!" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#!" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="#!" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </footer>
+
+  <footer>
+    
+    <div class="footer-socials">
+      <a href="#!" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p class="footer-credits">
+      Hero image: <a href="https://commons.wikimedia.org/wiki/File:New_hampshire_in_autumn.jpg" target="_blank" >Someone35</a>, 
+      <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank">CC BY-SA 3.0</a>, via Wikimedia Commons
+    </p>
+  </footer>
 
 
+  <script src="index.js"></script>
 
-
-    <script>
-    function toggleMore() {
-      const more = document.getElementById('webMore');
-      const btn = document.getElementById('webMoreBtn');
-      if (more.hidden) {
-        more.hidden = false;
-        btn.innerHTML = 'Show Less <i class="fa fa-chevron-up"></i>';
-      } else {
-        more.hidden = true;
-        btn.innerHTML = 'View More <i class="fa fa-chevron-down"></i>';
-      }
-    }
-  </script>
   </body>
 </html>
